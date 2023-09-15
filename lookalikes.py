@@ -151,10 +151,10 @@ def main(domain, limit=10):
             if len(domains[kind]) >= limit:
                 break
 
-    for key, val in candidates.iteritems():
-        print '%s:' % key
+    for key, val in candidates.items():
+        print('%s:' % key)
         for domain, rank in val:
-            print '  %s %s' % (domain, rank)
+            print('  %s (%.2f)' % (domain, rank))
 
 if __name__ == '__main__':
     main(sys.argv[1])
